@@ -165,7 +165,7 @@ public class Main extends JFrame {
 		int returnValue = jfc.showSaveDialog(null);
 		if (returnValue == JFileChooser.APPROVE_OPTION) {
 			if (jfc.getSelectedFile().isDirectory()) {
-				System.out.println("You selected the directory: " + jfc.getSelectedFile());
+				logger.info("You selected the directory: " + jfc.getSelectedFile());
 				String originPath = jfc.getSelectedFile().toString();
 				String savePath = originPath + "\\result";
 				File tmp = new File(savePath);
