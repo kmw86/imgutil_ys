@@ -67,7 +67,7 @@ public class ImgUtil {
 			    g2d.drawImage(tmp, 0, 0, null);
 			    g2d.dispose(); 
 				ImageIO.write(resized, "jpg", new File(savePath+"\\"+file.getName().replaceAll("png", "jpg")));
-			} catch (IOException e) {
+			} catch (Exception e) {
 				logger.info("이미지 변환 실패 : "+file.getName());
 				logger.debug(e.getMessage());
 			}

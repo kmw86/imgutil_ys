@@ -20,8 +20,8 @@ public class Test001 {
 		String line="";
 		List<String> list=new ArrayList<String>();
 		while ((line=br.readLine())!=null) {
-			//logger.info("line == "+line);
-			list.add(line);
+			logger.info("line == "+line);
+			list.add(line.trim());
 		}
 		br.close();
 		fr.close();
@@ -36,9 +36,10 @@ public class Test001 {
 		if(directory.isDirectory()){
 			String filePath="";
 			for(String data:list){
-				filePath=path+"/"+data;
+				filePath=path+"\\"+data;
 				photo=new File(filePath);
 				if(photo.isFile()){
+					//logger.info("filePath == "+filePath);
 					photo.delete();
 				}
 			}

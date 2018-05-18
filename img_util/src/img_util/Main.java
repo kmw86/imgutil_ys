@@ -151,7 +151,6 @@ public class Main extends JFrame {
 				}
 				contentPane.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 				JOptionPane.showMessageDialog(null, "완료");
-				
 			}
 		});
 
